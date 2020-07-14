@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> MC Texture Downloads</title>
+    <link rel="icon" href="Favicon.png" type="image/png" sizes="16x16">
+</head>
+<body>
+    <ul id="menue-item">
+        <li><img src="MC Textures Large.png" alt="MC Textures" style="object-fit: cover; width: 30px;height: 30px;position: absolute;left: 16px; top: 24px;"></li>
+        <li class="top-bar-text"><a class = "navbar"  href= "Home.html">Home</a></li>
+        <li class="top-bar-text"><a class = "navbar"  href= "Textures.html">Textures</a></li>
+        <li class="top-bar-text"><a class = "navbar" style= "color:rgb(255,239,216); background-color:rgba(255, 141, 11, 0.801);"href= "Worlds.html">Worlds</a></li>
+        <li class="top-bar-text"><a class = "navbar" href= "Udates.html">Updates</a></li>
+    </ul>
+    
+    <div class="floatingCard">
+    <ul>
+        <p id="platformText">Select a Platform for World Download<br><br></p>
+        <button onclick="buttonOptions()" class= "buttonOptions">Java Edition</button>
+        <button onclick="buttonOptions2()" class= "buttonOptions">Bedrock Edition</button>
+    </ul>
+    </div>
+    
+
+    <div class= "floatingCard">
+        <h5 class="buttonOptions">available Worlds will appear here</h5>
+    <div id= "Options"><h1 >Java:</h1>
+
+        <!-- Download buttons for Java go here -->
+        <p></p>
+        <p></p></div>
+    <div id= "2Options"><h1>Bedrock:</h1>
+
+        <!-- Download buttons for Bedrock go here -->
+        <p></p>
+        <p></p>
+    </div>
+    </div>
+     <script>
+        document.getElementById("Options").style.display = "none";
+        document.getElementById("2Options").style.display = "none";
+        
+        function buttonOptions() {
+        document.getElementById("Options").style.display = "inline";
+        document.getElementsByClassName("buttonOptions")[0].style.display = "none";
+        document.getElementsByClassName("buttonOptions")[1].style.display = "none";
+        document.getElementsByClassName("buttonOptions")[2].style.display = "none";
+        document.getElementsByClassName("platformText")[0].style.display = "none";
+        }
+        function buttonOptions2() {
+        document.getElementById("2Options").style.display = "inline";
+        document.getElementsByClassName("buttonOptions")[0].style.display = "none";
+        document.getElementsByClassName("buttonOptions")[1].style.display = "none";
+        document.getElementsByClassName("buttonOptions")[2].style.display = "none";
+        document.getElementById("platformText")[0].style.display = "none";
+        }
+        </script>
+</body>
+</html>
