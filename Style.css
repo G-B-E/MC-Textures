@@ -1,3 +1,6 @@
+body{
+background: url('Falling World.png') no-repeat center center fixed;
+}
 #menue-item > li {
     display: inline-block;
 }
