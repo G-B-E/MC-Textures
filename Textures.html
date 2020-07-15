@@ -8,67 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> MC Textures Downloads</title>
     <link rel="icon" href="Favicon.png" type="image/png" sizes="16x16">
-    <style>
-        div.gallery {
-          margin: 5px;
-          border: 1px solid #ccc;
-          float: left;
-          width: 490px;
-        }
-        
-        div.gallery:hover {
-          border: 1px solid #777;
-        }
-        
-        div.gallery img {
-          width: 100%;
-          height: auto;
-        }
-        
-        div.desc {
-          padding: 15px;
-          text-align: center;
-        }
-/* The popup form - hidden by default */
-.form-popup {
-  display: none;
-  align-items: center;
-  bottom: 10;
-  margin-top: 15px;
-  border: 1px solid #cecece;
-  background-color: #f1f1f1a8;
-  z-index: 9;
-}
-
-/* Add styles to the form container */
-.form-container {
-  position: relative;
-  max-width: 300px;
-  padding: 10px;
-  background-color: white;
-}
-
-/* Set a style for the submit/login button */
-.form-container .btn {
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
-  opacity: 0.8;
-}
-
-/* Add a red background color to the cancel button */
-.form-container .cancel {
-  background-color: red;
-}
-
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
-  opacity: 0.5;
-}
-        </style>
 </head>
 <body>
     <ul id="menue-item">
@@ -78,113 +17,154 @@
         <li class="top-bar-text"><a class = "navbar" href= "Worlds.html">Worlds</a></li>
         <li class="top-bar-text"><a class = "navbar" href= "Udates.html">Updates</a></li>
     </ul>
-    
+  <div class="buttonOptions">
     <div class="floatingCard">
     <ul>
         <p style=" font-size: 25px;" class="platformText">Select a Texure Platform<br><br></p>
-        <button onclick="buttonOptions()" class= "buttonOptions">Java Edition</button>
-        <button onclick="buttonOptions2()" class= "buttonOptions">Bedrock Edition</button>
-        <p style=" font-size: 15px; margin-top: 40px;">Open Texures will appear below<br><br></p>
+        <button onclick="buttonOptions()">Java Edition</button>
+        <button onclick="buttonOptions2()">Bedrock Edition</button>
     </ul>
     </div>
-
-        <div class="form-popup" id="seasonsForm">
-        <p style="margin-left: 10px; font-family: Quicksand;">Season's end Texture Pack features Fall leaves, amplified snowfall, and many different colors of grass and ferns.</p>
-        <img src="grass colors.png" style="height:33%; width:33%; object-fit:cover;">
-        <img src="Snow Pic.png" style="height:33%; width:33%; object-fit:cover;">
-        <img src="wild world 2.png" style="height:33%; width:33%; object-fit:cover;">
-            <button type="button" class="btn cancel" onclick="closeForm('seasonsForm')" style="width: 100%; padding-top: 10px; padding-bottom: 13px; background-color: rgba(253, 253, 253, 0.397); border: none; color: #313131; font-family: Quicksand;">C L O S E</button>
-        </div>
-        <div class="form-popup" id="weaponsForm">
-          <p style="margin-left: 10px; font-family: Quicksand;">Weapons and Combat pack contains new armor styles, new weapons and </p>
-          <img src="Hammer.png" style="height:33%; width:33%; object-fit:cover;">
-          <img src="armors.png" style="height:33%; width:33%; object-fit:cover;">
-          <img src="Ground Claymore.png" style="height:33%; width:33%; object-fit:cover;">
-              <button type="button" class="btn cancel" onclick="closeForm('weaponsForm')" style="width: 100%; padding-top: 10px; padding-bottom: 13px; background-color: rgba(253, 253, 253, 0.397); border: none; color: #313131; font-family: Quicksand;">C L O S E</button>
-          </div>
-        
-        <script>
-        function openForm(id) {
-          document.getElementById(id).style.display = "block";
-        }
-        
-        function closeForm(id) {
-          document.getElementById(id).style.display = "none";
-        }
-        
-        function Scroller() {
-        var elmnt = document.getElementById("menue-item");
-        elmnt.scrollIntoView();
-        }
-            
-        </script>
-        
-<div class= "floatingCard">
-
+</div>
+        <!-- The Seasons Modal -->
+<div id="seasonsModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header" style="background-color: rgba(255, 127, 23, 0.959);">
+      <span class="close"  onclick="closeModal('seasonsModal')">&times;</span>
+      <h2>Season's End MC Texture pack</h2>
+    </div>
+    <div class="modal-body">
+      <p style="margin-left: 10px; font-family: Quicksand;">Season's end Texture Pack features Fall leaves, amplified snowfall, and many different colors of grass and ferns.</p>
+      <img src="grass colors.png" style="height:33%; width:33%; object-fit:cover;">
+      <img src="wild world 2.png" style="height:33%; width:33%; object-fit:cover;">
+      <img src="Snow Pic.png" style="height:33%; width:33%; object-fit:cover;">
+    </div>
+    <div class="modal-footer" style="background-color: rgb(139, 84, 32);">
+      <h3>Created by: Gabe Pettingill</h3>
+    </div>
+  </div>
+  </div>
+  <!-- The Weapons Modal -->
+  <div id="weaponsModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: rgba(128, 72, 40, 0.808);">
+        <span class="close"  onclick="closeModal('weaponsModal')">&times;</span>
+        <h2>Weapons and Combat MC Texture pack</h2>
+      </div>
+      <div class="modal-body">
+        <p style="margin-left: 10px; font-family: Quicksand;">Weapons and Combat (V 1.0) pack includes new weapons such as Hammers, Sickles, Claymore, and new and detailed Swords, Axes and Armor</p>
+        <img src="Ground Claymore.png" style="height:33%; width:33%; object-fit:cover;">
+        <img src="Hammer.png" style="height:33%; width:33%; object-fit:cover;">
+        <img src="armors.png" style="height:33%; width:33%; object-fit:cover;">
+      </div>
+      <div class="modal-footer" style="background-color: rgba(88, 88, 88, 0.644);">
+        <h3>Created by: Gabe Pettingill</h3>
+      </div>
+    </div>
+    </div>
+      <!-- The Cool Modal -->
+  <div id="coolModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: rgba(189, 43, 226, 0.644);">
+        <span class="close"  onclick="closeModal('coolModal')">&times;</span>
+        <h2>Rainbows and Coolness</h2>
+      </div>
+      <div class="modal-body">
+        <p style="margin-left: 10px; font-family: Quicksand;">Giving Minecraft splash of color; New Weapon Models, Multi colored Trees, Foilage, and Crazy new Sky Detail!</p>
+        <img src="Cool World Jungle.png" style="height:33%; width:33%; object-fit:cover;">
+        <img src="Cool World Heights.png" style="height:33%; width:33%; object-fit:cover;">
+        <img src="Cool World Snow.png" style="height:33%; width:33%; object-fit:cover;">
+      </div>
+      <div class="modal-footer" style="background-color: rgba(43, 137, 226, 0.541);">
+        <h3>Created by: Ezra Pettingill</h3>
+      </div>
+    </div>
+</div>
+          </div><div class= "floatingCard">
         <h5 class="buttonOptions">available textures will appear here</h5>
     <div id= "Options"><h1>Java:</h1>
 
-        <!-- Download buttons for Java go here -->
-    <div style="margin-top: 100px;">
-        <div class="gallery">
-            <a target="_blank" href="wild world 1.png" >
-              <img src="wild world 1.png" alt="Cinque Terre" width="600px" height="400px">
+<!-- Download buttons for Java go here -->
+<div style="margin-top: 100px;">
+<div class="gallery">
+            <a onclick="openModal('seasonsModal')">
+              <img src="wild world 1.png" alt="Crazy Hills with Texture Pack" width="600px" height="400px">
             </a>
-            <div onclick="Scroller()">
-            <div class="desc" onclick="openForm('seasonsForm')" >Season's End Texture Pack V 1.0</div>
-          </div></div>
-          
+            <div class="desc" onclick="openModal('seasonsModal')" >Season's End Texture Pack V 1.0</div>
+          </div>
+
           <div class="gallery">
-            <a target="_blank" href="claymore in rock.png">
-              <img src="claymore in rock.png" alt="Forest" width="600" height="400">
+            <a onclick="openModal('weaponsModal')">
+              <img src="claymore in rock.png" alt="Large sword protruding from the earth" width="600" height="400">
             </a>
-            <div onclick="Scroller()">
-            <div class="desc" onclick="openForm('weaponsForm')">Weapons and Combat V 1.0</div>
-          </div></div>
-          
+            <div class="desc" onclick="openModal('weaponsModal')">Weapons and Combat V 1.0</div>
+          </div>
+
           <div class="gallery">
-            <a target="_blank" href="Cool World Tree Leaves.png">
-              <img src="Cool World Tree Leaves.png" alt="Northern Lights" width="600" height="400">
+            <a onclick="openModal('coolModal')">
+              <img src="Cool World Tree Leaves.png" alt="Multi Colored Tree" width="600" height="400">
             </a>
-            <div class="desc">Rainbows and Coolness</div>
+            <div class="desc" onclick="openModal('coolModal')">Rainbows and Coolness</div>
           </div>
           
           <div class="gallery">
             <a target="_blank" href="Hammer.png">
-              <img src="Hammer.png" alt="Mountains" width="600" height="400">
+              <img src="Hammer.png" alt="" width="600" height="400">
             </a>
             <div class="desc">Add a description of the image here</div>
             </div>
         </div>
-    </div>
-
-    <div id= "2Options"><h1>Bedrock:</h1>
-
-        <!-- Download buttons for Bedrock go here -->
-        <a href="image (1).png" download>do it</a>
-        <p></p>
-        <p></p>
-    </div>
+      </div>
+<!-- Download buttons for Bedrock go here -->
+<div id= "2Options"><h1>Bedrock:</h1>
+<a href="image (1).png" download>do it</a>
 </div>
-     <script>
-        document.getElementById("Options").style.display = "none";
-        document.getElementById("2Options").style.display = "none";
-        
-        function buttonOptions() {
-        document.getElementById("Options").style.display = "inline";
-        document.getElementsByClassName("buttonOptions")[0].style.display = "none";
-        document.getElementsByClassName("buttonOptions")[1].style.display = "none";
-        document.getElementsByClassName("buttonOptions")[2].style.display = "none";
-        document.getElementsByClassName("platformText")[0].style.display = "none";
-        }
-        function buttonOptions2() {
-        document.getElementById("2Options").style.display = "inline";
-        document.getElementsByClassName("buttonOptions")[0].style.display = "none";
-        document.getElementsByClassName("buttonOptions")[1].style.display = "none";
-        document.getElementsByClassName("buttonOptions")[2].style.display = "none";
-        document.getElementsByClassName("platformText")[0].style.display = "none";
-        }
-        </script>
+<script>
+document.getElementById("Options").style.display = "none";
+document.getElementById("2Options").style.display = "none";
 
+function buttonOptions() {
+document.getElementById("Options").style.display = "inline";
+document.getElementsByClassName("buttonOptions")[0].style.display = "none";
+document.getElementsByClassName("buttonOptions")[1].style.display = "none";
+document.getElementsByClassName("buttonOptions")[2].style.display = "none";
+document.getElementsByClassName("platformText")[0].style.display = "none";
+}
+function buttonOptions2() {
+document.getElementById("2Options").style.display = "inline";
+document.getElementsByClassName("buttonOptions")[0].style.display = "none";
+document.getElementsByClassName("buttonOptions")[1].style.display = "none";
+document.getElementsByClassName("buttonOptions")[2].style.display = "none";
+document.getElementsByClassName("platformText")[0].style.display = "none";
+}
+var modal = document.getElementById(id);
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+function openModal(id){
+  document.getElementById(id).style.display = "block";
+};
+span.onclick = function() {
+  document.getElementById(id).style.display= "none";
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+function openModal(id) {
+  document.getElementById(id).style.display = "block";
+}
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}
+function Scroller() {
+var elmnt = document.getElementById("menue-item");
+elmnt.scrollIntoView();
+}
+            
+</script>
 </body>
 </html>
