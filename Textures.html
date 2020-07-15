@@ -66,7 +66,7 @@
 
 /* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
-  opacity: 1;
+  opacity: 0.5;
 }
         </style>
 </head>
@@ -81,30 +81,35 @@
     
     <div class="floatingCard">
     <ul>
-        <p id="platformText">Select a Texure Platform<br><br></p>
+        <p style=" font-size: 25px;" class="platformText">Select a Texure Platform<br><br></p>
         <button onclick="buttonOptions()" class= "buttonOptions">Java Edition</button>
         <button onclick="buttonOptions2()" class= "buttonOptions">Bedrock Edition</button>
+        <p style=" font-size: 15px; margin-top: 40px;">Open Texures will appear below<br><br></p>
     </ul>
     </div>
 
-        <div class="form-popup" id="myForm">
-        
+        <div class="form-popup" id="seasonsForm">
         <p style="margin-left: 10px; font-family: Quicksand;">Season's end Texture Pack features Fall leaves, amplified snowfall, and many different colors of grass and ferns.</p>
         <img src="grass colors.png" style="height:33%; width:33%; object-fit:cover;">
-        <img src="Falling World.png" style="height:33%; width:33%; object-fit:cover;">
+        <img src="Snow Pic.png" style="height:33%; width:33%; object-fit:cover;">
         <img src="wild world 2.png" style="height:33%; width:33%; object-fit:cover;">
-
-        
-            <button type="button" class="btn cancel" onclick="closeForm()" style="width: 100%; padding-top: 10px; padding-bottom: 13px; background-color: rgba(253, 253, 253, 0.397); border: none; color: #313131; font-family: Quicksand;">C L O S E</button>
+            <button type="button" class="btn cancel" onclick="closeForm('seasonsForm')" style="width: 100%; padding-top: 10px; padding-bottom: 13px; background-color: rgba(253, 253, 253, 0.397); border: none; color: #313131; font-family: Quicksand;">C L O S E</button>
         </div>
+        <div class="form-popup" id="weaponsForm">
+          <p style="margin-left: 10px; font-family: Quicksand;">Weapons and Combat pack contains new armor styles, new weapons and </p>
+          <img src="Hammer.png" style="height:33%; width:33%; object-fit:cover;">
+          <img src="armors.png" style="height:33%; width:33%; object-fit:cover;">
+          <img src="Ground Claymore.png" style="height:33%; width:33%; object-fit:cover;">
+              <button type="button" class="btn cancel" onclick="closeForm('weaponsForm')" style="width: 100%; padding-top: 10px; padding-bottom: 13px; background-color: rgba(253, 253, 253, 0.397); border: none; color: #313131; font-family: Quicksand;">C L O S E</button>
+          </div>
         
         <script>
-        function openForm() {
-          document.getElementById("myForm").style.display = "block";
+        function openForm(id) {
+          document.getElementById(id).style.display = "block";
         }
         
-        function closeForm() {
-          document.getElementById("myForm").style.display = "none";
+        function closeForm(id) {
+          document.getElementById(id).style.display = "none";
         }
         
         function Scroller() {
@@ -126,21 +131,22 @@
               <img src="wild world 1.png" alt="Cinque Terre" width="600px" height="400px">
             </a>
             <div onclick="Scroller()">
-            <div class="desc" onclick="openForm()" >Season's End Texture Pack V 1.0</div>
+            <div class="desc" onclick="openForm('seasonsForm')" >Season's End Texture Pack V 1.0</div>
           </div></div>
           
           <div class="gallery">
             <a target="_blank" href="claymore in rock.png">
               <img src="claymore in rock.png" alt="Forest" width="600" height="400">
             </a>
-            <div class="desc">Add a description of the image here</div>
-          </div>
+            <div onclick="Scroller()">
+            <div class="desc" onclick="openForm('weaponsForm')">Weapons and Combat V 1.0</div>
+          </div></div>
           
           <div class="gallery">
-            <a target="_blank" href="grass colors.png">
-              <img src="grass colors.png" alt="Northern Lights" width="600" height="400">
+            <a target="_blank" href="Cool World Tree Leaves.png">
+              <img src="Cool World Tree Leaves.png" alt="Northern Lights" width="600" height="400">
             </a>
-            <div class="desc">Add a description of the image here</div>
+            <div class="desc">Rainbows and Coolness</div>
           </div>
           
           <div class="gallery">
@@ -168,12 +174,15 @@
         document.getElementById("Options").style.display = "inline";
         document.getElementsByClassName("buttonOptions")[0].style.display = "none";
         document.getElementsByClassName("buttonOptions")[1].style.display = "none";
+        document.getElementsByClassName("buttonOptions")[2].style.display = "none";
+        document.getElementsByClassName("platformText")[0].style.display = "none";
         }
         function buttonOptions2() {
         document.getElementById("2Options").style.display = "inline";
         document.getElementsByClassName("buttonOptions")[0].style.display = "none";
         document.getElementsByClassName("buttonOptions")[1].style.display = "none";
-        document.getElementById("platformText")[0].style.display = "none";
+        document.getElementsByClassName("buttonOptions")[2].style.display = "none";
+        document.getElementsByClassName("platformText")[0].style.display = "none";
         }
         </script>
 
