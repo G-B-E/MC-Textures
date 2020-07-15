@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="Style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> MC Texture Downloads</title>
+    <title> MC Textures Downloads</title>
     <link rel="icon" href="Favicon.png" type="image/png" sizes="16x16">
     <style>
         div.gallery {
           margin: 5px;
           border: 1px solid #ccc;
           float: left;
-          width: 180px;
+          width: 490px;
         }
         
         div.gallery:hover {
@@ -28,6 +29,45 @@
           padding: 15px;
           text-align: center;
         }
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  align-items: center;
+  bottom: 10;
+  margin-top: 15px;
+  border: 1px solid #cecece;
+  background-color: #f1f1f1a8;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  position: relative;
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
         </style>
 </head>
 <body>
@@ -46,21 +86,48 @@
         <button onclick="buttonOptions2()" class= "buttonOptions">Bedrock Edition</button>
     </ul>
     </div>
-    
 
+        <div class="form-popup" id="myForm">
+        
+        <p>Season's end Texture Pack features Fall leaves, amplified snowfall, and many different colors of grass and ferns.</p>
+        <img src="grass colors.png" style="height:33%; width:33%; object-fit:cover;">
+        <img src="Falling World.png" style="height:33%; width:33%; object-fit:cover;">
+        <img src="wild world 2.png" style="height:33%; width:33%; object-fit:cover;">
+
+        
+            <button type="button" class="btn cancel" onclick="closeForm()" style="width: 100%; padding-top: 10px; padding-bottom: 13px; background-color: rgba(253, 253, 253, 0.397); border: none; color: #313131; font-family: Quicksand;">C L O S E</button>
+        </div>
+        
+        <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+        
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+        
+        function Scroller() {
+        var elmnt = document.getElementById("menue-item");
+        elmnt.scrollIntoView();
+        }
+            
+        </script>
+        
 <div class= "floatingCard">
 
         <h5 class="buttonOptions">available textures will appear here</h5>
-    <div id= "Options"><h1 >Java:</h1>
+    <div id= "Options"><h1>Java:</h1>
 
         <!-- Download buttons for Java go here -->
     <div style="margin-top: 100px;">
         <div class="gallery">
-            <a target="_blank" href="wild world 1.png">
+            <a target="_blank" href="wild world 1.png" >
               <img src="wild world 1.png" alt="Cinque Terre" width="600px" height="400px">
             </a>
-            <div class="desc">Add a description of the image here</div>
-          </div>
+            <div onclick="Scroller()">
+            <div class="desc" onclick="openForm()" >Season's End Texture Pack V 1.0</div>
+          </div></div>
           
           <div class="gallery">
             <a target="_blank" href="claymore in rock.png">
@@ -77,8 +144,8 @@
           </div>
           
           <div class="gallery">
-            <a target="_blank" href="img_mountains.jpg">
-              <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+            <a target="_blank" href="Hammer.png">
+              <img src="Hammer.png" alt="Mountains" width="600" height="400">
             </a>
             <div class="desc">Add a description of the image here</div>
             </div>
@@ -101,16 +168,14 @@
         document.getElementById("Options").style.display = "inline";
         document.getElementsByClassName("buttonOptions")[0].style.display = "none";
         document.getElementsByClassName("buttonOptions")[1].style.display = "none";
-        document.getElementsByClassName("buttonOptions")[2].style.display = "none";
-        document.getElementsByClassName("platformText")[0].style.display = "none";
         }
         function buttonOptions2() {
         document.getElementById("2Options").style.display = "inline";
         document.getElementsByClassName("buttonOptions")[0].style.display = "none";
         document.getElementsByClassName("buttonOptions")[1].style.display = "none";
-        document.getElementsByClassName("buttonOptions")[2].style.display = "none";
         document.getElementById("platformText")[0].style.display = "none";
         }
         </script>
+
 </body>
 </html>
