@@ -40,8 +40,9 @@
       <img src="Snow Pic.png" style="height:206px; width:33%; object-fit:cover;">
       <p style="margin-left: 10px; font-family: Quicksand;">Season's end MC Texture Skin Included</p>
     </div>
-    <div class="modal-footer" style="background-color: rgb(139, 84, 32);">
+    <div class="modal-footer" style="background-color: rgb(128, 83, 40);">
       <h3>Created by: Gabe Pettingill</h3>
+      <button style="position: fixed;margin-left: 1050px;bottom: 210.5px;background-color: rgb(255, 255, 255);border: none;padding: 20px;"> D O W N L O A D</button>
     </div>
   </div>
   </div>
@@ -61,7 +62,10 @@
       </div>
       <div class="modal-footer" style="background-color: rgba(88, 88, 88, 0.644);">
         <h3>Created by: Gabe Pettingill</h3>
-      </div>
+        
+        <button style="position: fixed;margin-left: 1050px;bottom: 207px;background-color: rgb(255, 255, 255);border: none;padding: 20px;"> D O W N L O A D</button>
+      
+    </div>
     </div>
     </div>
       <!-- The Cool Modal -->
@@ -80,7 +84,10 @@
       </div>
       <div class="modal-footer" style="background-color: rgba(43, 137, 226, 0.541);">
         <h3>Created by: Ezra Pettingill</h3>
+        <div onclick="closeModal('coolModal')">
+        <button style="position: fixed;margin-left: 1050px;bottom: 210px;background-color: rgb(255, 255, 255);border: none;padding: 20px; cursor: pointer;" onclick="triggerSkin('coolSkin');this.getElementsByTagName('a')[0].click('click')"><a href="Rainbows and Coolness MC Textures.zip" download ></a>D O W N L O A D</button>
       </div>
+    </div>
     </div>
 </div>
           </div><div class= "floatingCard">
@@ -167,7 +174,20 @@ function Scroller() {
 var elmnt = document.getElementById("menue-item");
 elmnt.scrollIntoView();
 }
-            
+function triggerSkin(id) {
+document.getElementById(id).style.display="inline";
+}
+function denySkin(id){
+document.getElementById(id).style.display="none";
+}
 </script>
+<div id="coolSkin" style="display:none;">
+<div id="skinBanner">
+  <p>
+      You earned a free skin! MC Textures 'Rainbows and Coolness Adventurer' is yours for the taking!
+      <a href="Cool World MC Textures Skin.png" download onclick="denySkin('skinBanner')">Accept</a>/<a onclick="denySkin('skinBanner')" style="cursor: pointer; color: blue; text-decoration: underline;">Deny</a>
+    </p>
+  </div>
+</div>
 </body>
 </html>
