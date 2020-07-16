@@ -21,29 +21,31 @@
     <div class="floatingCard">
     <ul>
         <p style=" font-size: 25px;" class="platformText">Select a Texure Platform<br><br></p>
-        <button onclick="buttonOptions()">Java Edition</button>
-        <button onclick="buttonOptions2()">Bedrock Edition</button>
+        <button onclick="buttonOptions()" class="platformButtons">Java Edition</button>
+        <button onclick="buttonOptions2()" class="platformButtons">Bedrock Edition</button>
     </ul>
     </div>
 </div>
         <!-- The Seasons Modal -->
 <div id="seasonsModal" class="modal">
   <div class="modal-content">
-    <div class="modal-header" style="background-color: rgba(255, 127, 23, 0.959);">
+    <div class="modal-header" style="background-color: rgba(223, 99, 27, 0.829);">
       <span class="close"  onclick="closeModal('seasonsModal')">&times;</span>
-      <h2>Season's End MC Texture pack</h2>
+      <h2>Seasons End MC Texture pack</h2>
     </div>
     <div class="modal-body">
-      <p style="margin-left: 10px; font-family: Quicksand;">Season's end Texture Pack features Fall leaves, amplified snowfall, and many different colors of grass and ferns.</p>
+      <p style="margin-left: 10px; font-family: Quicksand;">Seasons end Texture Pack features Fall leaves, amplified snowfall, and many different colors of grass and ferns.</p>
       <img src="grass colors.png" style="height:206px; width:33%; object-fit:cover;">
       <img src="wild world 2.png" style="height:33%; width:33%; object-fit:cover;">
       <img src="Snow Pic.png" style="height:206px; width:33%; object-fit:cover;">
-      <p style="margin-left: 10px; font-family: Quicksand;">Season's end MC Texture Skin Included</p>
+      
+      <p style="margin-left: 10px; font-family: Quicksand;">Seasons end MC Texture Skin Included</p>
     </div>
+      <div onclick="closeModal('seasonsModal')">
+     <button class="downloadButton"> D  O  W  N  L  O  A  D</button></div>
     <div class="modal-footer" style="background-color: rgb(128, 83, 40);">
       <h3>Created by: Gabe Pettingill</h3>
-      <button style="position: fixed;margin-left: 1050px;bottom: 210.5px;background-color: rgb(255, 255, 255);border: none;padding: 20px;"> D O W N L O A D</button>
-    </div>
+  </div>
   </div>
   </div>
   <!-- The Weapons Modal -->
@@ -54,17 +56,17 @@
         <h2>Weapons and Combat MC Texture pack</h2>
       </div>
       <div class="modal-body">
-        <p style="margin-left: 10px; font-family: Quicksand;">Weapons and Combat (V 1.0) pack includes new weapons such as Hammers, Sickles, Claymore, and new and detailed Swords, Axes and Armor</p>
+        <p style="margin-left: 10px; font-family: Quicksand;">Weapons and Combat ( V 1.0 ) pack includes new weapons such as Hammers, Sickles, Claymore, and new and detailed Swords, Axes and Armor</p>
         <img src="Ground Claymore.png" style="height:33%; width:33%; object-fit:cover;">
         <img src="Hammer.png" style="height:33%; width:33%; object-fit:cover;">
         <img src="armors.png" style="height:209px; width:33%; object-fit:cover;">
-        <p style="margin-left: 10px; font-family: Quicksand;">(Does not contain Season's End MC Pack)</p>
+        <p style="margin-left: 10px; font-family: Quicksand;">(Does not contain Seasons End MC Pack)</p>
       </div>
+        <div onclick="closeModal('weaponsModal')">
+        <button class="downloadButton" onclick="this.getElementsByTagName('a')[0].click('click')"><a href="Weapons and Combat MC Textures.zip" download ></a>D  O  W  N  L  O  A  D</button>
+        </div>
       <div class="modal-footer" style="background-color: rgba(88, 88, 88, 0.644);">
         <h3>Created by: Gabe Pettingill</h3>
-        
-        <button style="position: fixed;margin-left: 1050px;bottom: 207px;background-color: rgb(255, 255, 255);border: none;padding: 20px;"> D O W N L O A D</button>
-      
     </div>
     </div>
     </div>
@@ -80,19 +82,81 @@
         <img src="Cool World Jungle.png" style="height:33%; width:33%; object-fit:cover;">
         <img src="Cool World Heights.png" style="height:33%; width:33%; object-fit:cover;">
         <img src="Cool World Snow.png" style="height:33%; width: 33%; object-fit:cover;">
-        <p style="margin-left: 10px; font-family: Quicksand;">(V 1.0 may contain bugs)</p>
+        <p style="margin-left: 10px; font-family: Quicksand;">( V 1.0 may contain bugs )</p>
+      </div>
+      <div onclick="closeModal('coolModal')">
+      <button class="downloadButton" onclick="triggerSkin('coolSkin');this.getElementsByTagName('a')[0].click('click')"><a href="Rainbows and Coolness MC Textures.zip" download ></a>D  O  W  N  L  O  A  D</button>
       </div>
       <div class="modal-footer" style="background-color: rgba(43, 137, 226, 0.541);">
         <h3>Created by: Ezra Pettingill</h3>
-        <div onclick="closeModal('coolModal')">
-        <button style="position: fixed;margin-left: 1050px;bottom: 210px;background-color: rgb(255, 255, 255);border: none;padding: 20px; cursor: pointer;" onclick="triggerSkin('coolSkin');this.getElementsByTagName('a')[0].click('click')"><a href="Rainbows and Coolness MC Textures.zip" download ></a>D O W N L O A D</button>
+    </div>
+    </div>
+    </div>
+    <!-- The Villager Modal -->
+  <div id="villagerModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: rgb(221, 161, 127);">
+        <span class="close"  onclick="closeModal('villagerModal')">&times;</span>
+        <h2>Weapons and Combat MC Texture pack</h2>
       </div>
+      <div class="modal-body">
+        <p style="margin-left: 10px; font-family: Quicksand;">Make Villages have a little more personality! This Texture pack gives Villagers a more pronounced and traditional look.</p>
+        <img src="Villager Swamp.png" style="height:33%; width:33%; object-fit:cover;">
+        <img src="Villager Jungle.png" style="height:33%; width:33%; object-fit:cover;">
+        <img src="Wandering trader.png" style="height:209px; width:33%; object-fit:cover;">
+        <p style="margin-left: 10px; font-family: Quicksand;">(Does not contain Seasons End MC Pack)</p>
+      </div>
+        <div onclick="closeModal('villagerModal')">
+        <button class="downloadButton" onclick="triggerSkin('evokerOutcastSkin');this.getElementsByTagName('a')[0].click('click')"><a href="Villager Plains.png" download ></a>D  O  W  N  L  O  A  D</button>
+        </div>
+      <div class="modal-footer" style="background-color: rgba(145, 145, 145, 0.644);">
+        <h3>Created by: Gabe Pettingill</h3>
     </div>
     </div>
-</div>
+    </div>
+        <!-- The Husk Modal -->
+  <div id="huskModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: rgb(150, 131, 118);">
+        <span class="close"  onclick="closeModal('huskModal')">&times;</span>
+        <h2>Haunting Husk</h2>
+      </div>
+      <div class="modal-body">
+        <p style="margin-left: 10px; font-family: Quicksand; text-align: center;">Husks Become ghoulish Mummies! This Haunting pack gives your deserts a little Spook!</p>
+        <img src="Mummie 2.png" style="height:33%; width:60%; object-fit:cover;margin-left: 20%;">
+        <p style="margin-left: 10px; font-family: Quicksand; text-align: center;">( V 1.0 )</p>
+      </div>
+        <div onclick="closeModal('villagerModal')">
+        <button class="downloadButton" onclick="this.getElementsByTagName('a')[0].click('click')"><a href="Bedrock Packs/husk-zombie-v1-tynker-ab609345.mcaddon" download ></a>D  O  W  N  L  O  A  D</button>
+        </div>
+      <div class="modal-footer" style="background-color: rgb(150, 131, 118);">
+        <h3>Created by: Ezra Pettingill</h3>
+    </div>
+    </div>
+    </div>
+     <!-- The Golem Modal -->
+  <div id="chubbyGolemModel" class="modal">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: rgb(138, 138, 138);">
+        <span class="close"  onclick="closeModal('chubbyGolemModel')">&times;</span>
+        <h2>Fat Iron Golem</h2>
+      </div>
+      <div class="modal-body">
+        <p style="margin-left: 10px; font-family: Quicksand; text-align: center;">And they said Iron Golems Couldn't get any bigger. I give you Chubby Iron Golem!</p>
+        <img src="Fat Irom Golem 2.png" style="height:33%; width:60%; object-fit:cover;margin-left: 20%;">
+        <p style="margin-left: 10px; font-family: Quicksand; text-align: center;">(V 3.0 )</p>
+      </div>
+        <div onclick="closeModal('villagerModal')">
+        <button class="downloadButton" onclick="this.getElementsByTagName('a')[0].click('click')"><a href="Bedrock Packs/iron-golem-v3-tynker-40120d35.mcaddon" download ></a>D  O  W  N  L  O  A  D</button>
+        </div>
+      <div class="modal-footer" style="background-color: rgb(138, 138, 138);">
+        <h3>Created by: Gabe Pettingill</h3>
+    </div>
+    </div>
+    </div>
           </div><div class= "floatingCard">
         <h5 class="buttonOptions">available textures will appear here</h5>
-    <div id= "Options"><h1>Java:</h1>
+    <div id= "Options"><h1>Java Edition:</h1>
 
 <!-- Download buttons for Java go here -->
 <div style="margin-top: 100px;">
@@ -100,7 +164,7 @@
             <a onclick="openModal('seasonsModal')">
               <img src="wild world 1.png" alt="Crazy Hills with Texture Pack" width="600px" height="400px">
             </a>
-            <div class="desc" onclick="openModal('seasonsModal')" >Season's End Texture Pack V 1.0</div>
+            <div class="desc" onclick="openModal('seasonsModal')" >Seasons End Texture Pack V 1.0</div>
           </div>
 
           <div class="gallery">
@@ -114,21 +178,35 @@
             <a onclick="openModal('coolModal')">
               <img src="Cool World Tree Leaves.png" alt="Multi Colored Tree" width="600" height="400">
             </a>
-            <div class="desc" onclick="openModal('coolModal')">Rainbows and Coolness</div>
+            <div class="desc" onclick="openModal('coolModal')">Rainbows and Coolness V 1.0</div>
           </div>
           
           <div class="gallery">
-            <a target="_blank" href="Hammer.png">
-              <img src="Hammer.png" alt="" width="600" height="400">
+            <a onclick="openModal('villagerModal')">
+              <img src="Villager Plains.png" alt="Villager in Forest" width="600" height="400">
             </a>
-            <div class="desc">Add a description of the image here</div>
+            <div class="desc" onclick="openModal('villagerModal')">Village visual V 1.0</div>
             </div>
         </div>
       </div>
-<!-- Download buttons for Bedrock go here -->
-<div id= "2Options"><h1>Bedrock:</h1>
-<a href="image (1).png" download>do it</a>
-</div>
+
+<div id= "2Options"><h1>Bedrock Edition:</h1>
+  <!-- Download buttons for Bedrock go here -->
+  <div style="margin-top: 100px;">
+    <div class="gallery">
+                <a onclick="openModal('huskModal')">
+                  <img src="Mummie.png" alt="Mummie Husk" width="600" height="400">
+                </a>
+                <div class="desc" onclick="openModal('seasonsModal')" >Haunting Husk</div>
+              </div>
+  <div class="gallery">
+    <a onclick="openModal('chubbyGolemModel')">
+      <img src="Fat Iron Golem.png" alt="Overweight Iron Golem" width="600" height="400">
+    </a>
+    <div class="desc" onclick="openModal('seasonsModal')" >Fat Iron Golem</div>
+  </div>
+              </div>
+            </div>
 <script>
 document.getElementById("Options").style.display = "none";
 document.getElementById("2Options").style.display = "none";
@@ -137,32 +215,13 @@ function buttonOptions() {
 document.getElementById("Options").style.display = "inline";
 document.getElementsByClassName("buttonOptions")[0].style.display = "none";
 document.getElementsByClassName("buttonOptions")[1].style.display = "none";
-document.getElementsByClassName("buttonOptions")[2].style.display = "none";
 document.getElementsByClassName("platformText")[0].style.display = "none";
 }
 function buttonOptions2() {
 document.getElementById("2Options").style.display = "inline";
 document.getElementsByClassName("buttonOptions")[0].style.display = "none";
 document.getElementsByClassName("buttonOptions")[1].style.display = "none";
-document.getElementsByClassName("buttonOptions")[2].style.display = "none";
 document.getElementsByClassName("platformText")[0].style.display = "none";
-}
-var modal = document.getElementById(id);
-var span = document.getElementsByClassName("close")[0];
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-function openModal(id){
-  document.getElementById(id).style.display = "block";
-};
-span.onclick = function() {
-  document.getElementById(id).style.display= "none";
-  modal.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
 }
 function openModal(id) {
   document.getElementById(id).style.display = "block";
@@ -175,19 +234,25 @@ var elmnt = document.getElementById("menue-item");
 elmnt.scrollIntoView();
 }
 function triggerSkin(id) {
-document.getElementById(id).style.display="inline";
+ document.getElementById(id).style.display = "block";
 }
 function denySkin(id){
-document.getElementById(id).style.display="none";
+document.getElementById(id).style.display = "none";
 }
 </script>
 <div id="coolSkin" style="display:none;">
-<div id="skinBanner">
-  <p>
-      You earned a free skin! MC Textures 'Rainbows and Coolness Adventurer' is yours for the taking!
-      <a href="Cool World MC Textures Skin.png" download onclick="denySkin('skinBanner')">Accept</a>/<a onclick="denySkin('skinBanner')" style="cursor: pointer; color: blue; text-decoration: underline;">Deny</a>
+<div class="skinBanner" >
+  <p>You earned a free skin! MC Textures 'Rainbows and Coolness Adventurer' is yours for the taking!
+      <a href="Cool World MC Textures Skin.png" download onclick="denySkin('coolSkin')">Accept</a>/<a onclick="denySkin('coolSkin')" style="cursor: pointer; color: blue; text-decoration: underline;">Deny</a>
     </p>
   </div>
+  </div>
+<div id="evokerOutcastSkin" style="display:none;">
+<div class="skinBanner" >
+    <p>Hooray! You earned a free skin! MC Textures 'Evoker Outcast' is yours for the taking!
+        <a href="Evoker Outcast MC Textures.png" download onclick="denySkin('evokerOutcastSkin')">Accept</a>/<a onclick="denySkin('evokerOutcastSkin')" style="cursor: pointer; color: blue; text-decoration: underline;">Deny</a>
+      </p>
+    </div>
 </div>
 </body>
 </html>

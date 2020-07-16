@@ -46,6 +46,41 @@ background-color: rgb(104, 55, 32);
     color: whitesmoke;
     background-color: rgba(255, 80, 11, 0.836);
     }
+    @media screen and (min-width: 1026) {
+      
+      .navbar{
+        margin: 0px;
+        width: 100%;
+        padding-bottom: 20px;
+        padding-right: 130px;
+        padding-left: 130px;
+        padding-top: 11px;
+        font-family:Quicksand; font-size: 15px;
+        font-weight: 50px;
+        background-color: rgba(255, 100, 11, 0.767);
+        color: #ffffff;
+        text-decoration: none;
+        }
+      }
+      @media screen and (max-width: 1025px) {
+      body{
+        background: url('claymore\ in\ rock.png') no-repeat center center fixed;
+        background-color: rgb(99, 71, 30);
+        }
+      .navbar{
+        margin: 0px;
+        width: 100%;
+        padding-bottom: 20px;
+        padding-right: 50px;
+        padding-left: 50px;
+        padding-top: 11px;
+        font-family:Quicksand; font-size: 15px;
+        font-weight: 50px;
+        background-color: rgba(255, 100, 11, 0.767);
+        color: #ffffff;
+        text-decoration: none;
+        }
+    }
 .floatingCard{
     margin: 0px;
     margin-top: 18px;
@@ -87,7 +122,7 @@ background-color: rgb(104, 55, 32);
     left: 0;
     top: 0;
     width: 100%;
-    height: max-content;
+    height: 200%;
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
@@ -147,10 +182,10 @@ background-color: rgb(104, 55, 32);
     color: white;
   }
   div.gallery {
-    margin: 5px;
+    margin: 0.5%;
     border: 1px solid #ccc;
     float: left;
-    width: 490px;
+    width: 48%;
   }
   
   div.gallery:hover {
@@ -167,7 +202,7 @@ background-color: rgb(104, 55, 32);
     text-align: center;
   }
 
-  #skinBanner {
+  .skinBanner {
     position: fixed;
     bottom: 40px;
     left: 10%;
@@ -180,4 +215,22 @@ background-color: rgb(104, 55, 32);
     background-color: rgb(185, 185, 185);
     border-radius: 5px;
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  }
+  .downloadButton{
+    position: relative;
+    float: right;
+    top: 5px;
+    right: 5px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+  }
+  .platformButtons{
+    padding: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #ffffff;
+    border: none;
+    font-family: Quicksand;
   }
