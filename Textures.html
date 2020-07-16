@@ -15,7 +15,7 @@
         <li class="top-bar-text"><a class = "navbar"  href= "Home.html">Home</a></li>
         <li class="top-bar-text"><a class = "navbar" style= "color:rgb(255,239,216); background-color:rgba(255, 141, 11, 0.801);" href= "Textures.html">Textures</a></li>
         <li class="top-bar-text"><a class = "navbar" href= "Worlds.html">Worlds</a></li>
-        <li class="top-bar-text"><a class = "navbar" href= "Udates.html">Updates</a></li>
+        <li class="top-bar-text"><a class = "navbar" onclick="openModal('updatesModal')">Updates</a></li>
     </ul>
   <div class="buttonOptions">
     <div class="floatingCard">
@@ -254,5 +254,31 @@ document.getElementById(id).style.display = "none";
       </p>
     </div>
 </div>
+
+<div id="updatesModal" class="modal" style="margin-top: -44px;border: none;">
+  <div class="modal-content">
+    <div class="modal-header" style="background-color: rgba(112, 112, 112, 0.829);">
+      <span class="close"  onclick="closeModal('updatesModal')">&times;</span>
+      <h2>Updates</h2>
+    </div>
+    <div class="modal-body">
+      <p style="margin-left: 10px; font-family: Quicksand; font-size: 19px;">Updated MC Textures: Skins are now available with downloads! Download a pack to see if a free skin is included!<br>
+      Updated Packs include:<br><br>
+      Rainbows and coolness: Download cleaned of excess texures (Java)<br><br>
+      Village visual: Free skin updated (Java)<br><br>
+      Haunting Husk: Modal Images Updated and included before download (Bedrock)
+
+      </p>
+      <img src="Mummie 2.png" style="height:306px; width: 780px; object-fit:cover;">
+      
+      <p style="margin-left: 10px; font-family: Quicksand;"></p>
+    </div>
+      <div onclick="closeModal('updatesModal')">
+     <button class="downloadButton"> D  O  W  N  L  O  A  D</button></div>
+    <div class="modal-footer" style="background-color: rgba(112, 112, 112, 0.829);">
+      <h3>Download the free MC Textures skin!</h3>
+  </div>
+  </div>
+  </div>
 </body>
 </html>
