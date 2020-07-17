@@ -26,6 +26,32 @@
     </ul>
     </div>
 </div>
+      <!-- The Updates Tab Modal -->
+      <div id="updatesModal" class="modal" style="margin-top: -44px;border: none;">
+        <div class="modal-content">
+          <div class="modal-header" style="background-color: rgba(112, 112, 112, 0.829);">
+            <span class="close"  onclick="closeModal('updatesModal')">&times;</span>
+            <h2>Updates</h2>
+          </div>
+          <div class="modal-body">
+            <p style="margin-left: 10px; font-family: Quicksand; font-size: 19px;">Updated MC Textures: Skins are now available with downloads! Download a pack to see if a free skin is included!<br>
+            Updated Packs include:<br><br>
+            Rainbows and coolness: Download cleaned of excess texures (Java)<br><br>
+            Village visual: Free skin updated (Java)<br><br>
+            Haunting Husk: Modal Images Updated and included before download (Bedrock)
+    
+            </p>
+            <img src="Mummie 2.png" style="height:306px; width: 780px; object-fit:cover;">
+            
+            <p style="margin-left: 10px; font-family: Quicksand;"></p>
+          </div>
+            <div onclick="closeModal('updatesModal')">
+           <button class="downloadButton"> DOWNLOAD SKIN</button></div>
+          <div class="modal-footer" style="background-color: rgba(112, 112, 112, 0.829);">
+            <h3>Download the free MC Textures skin!</h3>
+        </div>
+        </div>
+        </div>
         <!-- The Seasons Modal -->
 <div id="seasonsModal" class="modal">
   <div class="modal-content">
@@ -42,7 +68,7 @@
       <p style="margin-left: 10px; font-family: Quicksand;">Seasons end MC Texture Skin Included</p>
     </div>
       <div onclick="closeModal('seasonsModal')">
-     <button class="downloadButton"> D  O  W  N  L  O  A  D</button></div>
+     <button class="downloadButton" onclick="this.getElementsByTagName('a')[0].click('click')"><a href="" download ></a> D  O  W  N  L  O  A  D</button></div>
     <div class="modal-footer" style="background-color: rgb(128, 83, 40);">
       <h3>Created by: Gabe Pettingill</h3>
   </div>
@@ -254,31 +280,5 @@ document.getElementById(id).style.display = "none";
       </p>
     </div>
 </div>
-
-<div id="updatesModal" class="modal" style="margin-top: -44px;border: none;">
-  <div class="modal-content">
-    <div class="modal-header" style="background-color: rgba(112, 112, 112, 0.829);">
-      <span class="close"  onclick="closeModal('updatesModal')">&times;</span>
-      <h2>Updates</h2>
-    </div>
-    <div class="modal-body">
-      <p style="margin-left: 10px; font-family: Quicksand; font-size: 19px;">Updated MC Textures: Skins are now available with downloads! Download a pack to see if a free skin is included!<br>
-      Updated Packs include:<br><br>
-      Rainbows and coolness: Download cleaned of excess texures (Java)<br><br>
-      Village visual: Free skin updated (Java)<br><br>
-      Haunting Husk: Modal Images Updated and included before download (Bedrock)
-
-      </p>
-      <img src="Mummie 2.png" style="height:306px; width: 780px; object-fit:cover;">
-      
-      <p style="margin-left: 10px; font-family: Quicksand;"></p>
-    </div>
-      <div onclick="closeModal('updatesModal')">
-     <button class="downloadButton"> D  O  W  N  L  O  A  D</button></div>
-    <div class="modal-footer" style="background-color: rgba(112, 112, 112, 0.829);">
-      <h3>Download the free MC Textures skin!</h3>
-  </div>
-  </div>
-  </div>
 </body>
 </html>
