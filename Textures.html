@@ -71,7 +71,7 @@
     <div class="modal-body">
       <p style="margin-left: 10px; font-family: Quicksand;">Seasons end Texture Pack features Fall leaves, amplified snowfall, and many different colors of grass and ferns.</p>
       <img src="grass colors.png" style="height:206px; width:33%; object-fit:cover;">
-      <img src="wild world 2.png" style="height:33%; width:33%; object-fit:cover;">
+      <img src="wild world 2.png" style="height:206px; width:33%; object-fit:cover;">
       <img src="Snow Pic.png" style="height:206px; width:33%; object-fit:cover;">
       
       <p style="margin-left: 10px; font-family: Quicksand;"></p>
@@ -138,7 +138,7 @@
         <p style="margin-left: 10px; font-family: Quicksand;">Make Villages have a little more personality! This Texture pack gives Villagers a more pronounced and traditional look.</p>
         <img src="Villager Swamp.png" style="height:33%; width:33%; object-fit:cover;">
         <img src="Villager Jungle.png" style="height:33%; width:33%; object-fit:cover;">
-        <img src="Wandering trader.png" style="height:209px; width:33%; object-fit:cover;">
+        <img src="Wandering trader.png" style="height:33%; width:33%; object-fit:cover;">
         <p style="margin-left: 10px; font-family: Quicksand;">(Does not contain Seasons End MC Pack)</p>
       </div>
         <div onclick="closeModal('villagerModal')">
@@ -264,11 +264,12 @@ function openModal(id) {
 }
 function closeModal(id) {
   document.getElementById(id).style.display = "none";
-  document.getElementById('downloadbar').style.display = "block";
+  
 }
 function Scroller() {
 var elmnt = document.getElementById("menue-item");
 elmnt.scrollIntoView();
+document.getElementById('downloadbar').style.display = "block";
 }
 function triggerSkin(id) {
  document.getElementById(id).style.display = "block";
