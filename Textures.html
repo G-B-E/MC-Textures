@@ -17,6 +17,15 @@
         <li class="top-bar-text"><a class = "navbar" href= "Worlds.html">Worlds</a></li>
         <li class="top-bar-text"><a class = "navbar" onclick="openModal('updatesModal')">Updates</a></li>
     </ul>
+    <div id="downloadbar" style="display: none;">
+    <div class="floatingCard" >
+  <h1>Purchace in Progress: $32.75 ...</h1>
+  <div id="myProgress">
+    <div id="myBar"></div>
+  </div>
+  <p>(Using card located in browser)</p>
+  </div>
+</div>
   <div class="buttonOptions">
     <div class="floatingCard">
     <ul>
@@ -65,10 +74,10 @@
       <img src="wild world 2.png" style="height:33%; width:33%; object-fit:cover;">
       <img src="Snow Pic.png" style="height:206px; width:33%; object-fit:cover;">
       
-      <p style="margin-left: 10px; font-family: Quicksand;">Seasons end MC Texture Skin Included</p>
+      <p style="margin-left: 10px; font-family: Quicksand;"></p>
     </div>
       <div onclick="closeModal('seasonsModal')">
-     <button class="downloadButton" onclick="this.getElementsByTagName('a')[0].click('click')"><a href="Season's end MC Textures.zip" download ></a> D  O  W  N  L  O  A  D</button></div>
+     <button class="downloadButton" onclick="Scroller();move(); this.getElementsByTagName('a')[0].click('click')"><a href="Season's end MC Textures.zip" download ></a> D  O  W  N  L  O  A  D</button></div>
     <div class="modal-footer" style="background-color: rgb(128, 83, 40);">
       <h3>Created by: Gabe Pettingill</h3>
   </div>
@@ -89,7 +98,7 @@
         <p style="margin-left: 10px; font-family: Quicksand;">(Does not contain Seasons End MC Pack)</p>
       </div>
         <div onclick="closeModal('weaponsModal')">
-        <button class="downloadButton" onclick="this.getElementsByTagName('a')[0].click('click')"><a href="Weapons and Combat MC Textures.zip" download ></a>D  O  W  N  L  O  A  D</button>
+        <button class="downloadButton" onclick="Scroller();move();this.getElementsByTagName('a')[0].click('click')"><a href="Weapons and Combat MC Textures.zip" download ></a>D  O  W  N  L  O  A  D</button>
         </div>
       <div class="modal-footer" style="background-color: rgba(88, 88, 88, 0.644);">
         <h3>Created by: Gabe Pettingill</h3>
@@ -111,7 +120,7 @@
         <p style="margin-left: 10px; font-family: Quicksand;">( V 1.0 may contain bugs )</p>
       </div>
       <div onclick="closeModal('coolModal')">
-      <button class="downloadButton" onclick="triggerSkin('coolSkin');this.getElementsByTagName('a')[0].click('click')"><a href="Rainbows and Coolness MC Textures.zip" download ></a>D  O  W  N  L  O  A  D</button>
+      <button class="downloadButton" onclick="Scroller();move();triggerSkin('coolSkin');this.getElementsByTagName('a')[0].click('click')"><a href="Rainbows and Coolness MC Textures.zip" download ></a>D  O  W  N  L  O  A  D</button>
       </div>
       <div class="modal-footer" style="background-color: rgba(43, 137, 226, 0.541);">
         <h3>Created by: Ezra Pettingill</h3>
@@ -133,7 +142,7 @@
         <p style="margin-left: 10px; font-family: Quicksand;">(Does not contain Seasons End MC Pack)</p>
       </div>
         <div onclick="closeModal('villagerModal')">
-        <button class="downloadButton" onclick="triggerSkin('evokerOutcastSkin');this.getElementsByTagName('a')[0].click('click')"><a href="Village Visual .zip" download ></a>D  O  W  N  L  O  A  D</button>
+        <button class="downloadButton" onclick="Scroller();move();triggerSkin('evokerOutcastSkin');this.getElementsByTagName('a')[0].click('click')"><a href="Village Visual .zip" download ></a>D  O  W  N  L  O  A  D</button>
         </div>
       <div class="modal-footer" style="background-color: rgba(145, 145, 145, 0.644);">
         <h3>Created by: Gabe Pettingill</h3>
@@ -153,7 +162,7 @@
         <p style="margin-left: 10px; font-family: Quicksand; text-align: center;">( V 1.0 )</p>
       </div>
         <div onclick="closeModal('villagerModal')">
-        <button class="downloadButton" onclick="this.getElementsByTagName('a')[0].click('click')"><a href="Bedrock Packs/husk-zombie-v1-tynker-ab609345.mcaddon" download ></a>D  O  W  N  L  O  A  D</button>
+        <button class="downloadButton" onclick="Scroller();move();this.getElementsByTagName('a')[0].click('click')"><a href="Bedrock Packs/husk-zombie-v1-tynker-ab609345.mcaddon" download ></a>D  O  W  N  L  O  A  D</button>
         </div>
       <div class="modal-footer" style="background-color: rgb(150, 131, 118);">
         <h3>Created by: Ezra Pettingill</h3>
@@ -173,7 +182,7 @@
         <p style="margin-left: 10px; font-family: Quicksand; text-align: center;">(V 3.0 )</p>
       </div>
         <div onclick="closeModal('villagerModal')">
-        <button class="downloadButton" onclick="this.getElementsByTagName('a')[0].click('click')"><a href="Bedrock Packs/iron-golem-v3-tynker-40120d35.mcaddon" download ></a>D  O  W  N  L  O  A  D</button>
+        <button class="downloadButton" onclick="Scroller();move();this.getElementsByTagName('a')[0].click('click')"><a href="Bedrock Packs/iron-golem-v3-tynker-40120d35.mcaddon" download ></a>D  O  W  N  L  O  A  D</button>
         </div>
       <div class="modal-footer" style="background-color: rgb(138, 138, 138);">
         <h3>Created by: Gabe Pettingill</h3>
@@ -255,6 +264,7 @@ function openModal(id) {
 }
 function closeModal(id) {
   document.getElementById(id).style.display = "none";
+  document.getElementById('downloadbar').style.display = "block";
 }
 function Scroller() {
 var elmnt = document.getElementById("menue-item");
@@ -266,18 +276,42 @@ function triggerSkin(id) {
 function denySkin(id){
 document.getElementById(id).style.display = "none";
 }
+
+var i = 0;
+function move() {
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+      }
+  if(width >= 100){
+  document.getElementById('downloadbar').style.display = "none";
+  }
+    }
+  }
+
+}
 </script>
+
 <div id="coolSkin" style="display:none;">
 <div class="skinBanner" >
   <p>You earned a free skin! MC Textures 'Rainbows and Coolness Adventurer' is yours for the taking!
-      <a href="Cool World MC Textures Skin.png" download onclick="denySkin('coolSkin')">Accept</a>/<a onclick="denySkin('coolSkin')" style="cursor: pointer; color: blue; text-decoration: underline;">Deny</a>
+      <a href="Cool World MC Textures Skin.png" download onclick="denySkin('coolSkin')" style="cursor: pointer; color: rgb(255, 136, 0); text-decoration: none;">Accept</a>/<a onclick="denySkin('coolSkin')" style="cursor: pointer; color: rgb(255, 136, 0); text-decoration: none;">Deny</a>
     </p>
   </div>
   </div>
 <div id="evokerOutcastSkin" style="display:none;">
 <div class="skinBanner" >
     <p>Hooray! You earned a free skin! MC Textures 'Evoker Outcast' is yours for the taking!
-        <a href="Evoker Outcast MC Textures.png" download onclick="denySkin('evokerOutcastSkin')">Accept</a>/<a onclick="denySkin('evokerOutcastSkin')" style="cursor: pointer; color: blue; text-decoration: underline;">Deny</a>
+        <a href="Evoker Outcast MC Textures.png" download onclick="denySkin('evokerOutcastSkin')" style="cursor: pointer; color: rgb(255, 136, 0); text-decoration: none;">Accept</a>/<a onclick="denySkin('evokerOutcastSkin')" style="cursor: pointer; color: rgb(255, 136, 0); text-decoration: none;">Deny</a>
       </p>
     </div>
 </div>

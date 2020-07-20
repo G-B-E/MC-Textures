@@ -212,7 +212,7 @@ background-color: rgb(104, 55, 32);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(185, 185, 185);
+    background-color: rgba(255, 255, 255, 0.486);
     border-radius: 5px;
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
   }
@@ -233,4 +233,13 @@ background-color: rgb(104, 55, 32);
     background-color: #ffffff;
     border: none;
     font-family: Quicksand;
+  }
+  #myProgress {
+    width: 100%;
+    background-color: #ddd;
+  }
+  #myBar {
+    width: 1%;
+    height: 30px;
+    background-color: rgb(255, 136, 0);
   }
