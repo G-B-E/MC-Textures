@@ -189,11 +189,32 @@
     </div>
     </div>
     </div>
+         <!-- The Creeper Modal -->
+  <div id="creeperModel" class="modal" style="margin-top: -35px;">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: rgb(147, 235, 125);">
+        <span class="close"  onclick="closeModal('creeperModel')">&times;</span>
+        <h2>Bobblehead Creeper</h2>
+      </div>
+      <div class="modal-body">
+        <p style="margin-left: 10px; font-family: Quicksand; text-align: center;">Big headed Creepers </p>
+        <img src="Bobblehead Creeper.png" style="height:400px ; width:33%; object-fit:contain;margin-left: 34%;">
+        <p style="margin-left: 10px; font-family: Quicksand; text-align: center;">(V 1.0 )</p>
+      </div>
+        <div onclick="closeModal('creeperModel')">
+        <button class="downloadButton" onclick="Scroller();move();this.getElementsByTagName('a')[0].click('click')"><a href="Bedrock Packs/iron-golem-v3-tynker-40120d35.mcaddon" download ></a>D  O  W  N  L  O  A  D</button>
+        </div>
+      <div class="modal-footer" style="background-color: rgb(147, 235, 125);">
+        <h3>Created by: Ezra Pettingill</h3>
+    </div>
+    </div>
+    </div>
+    
+
           </div><div class= "floatingCard">
         <h5 class="buttonOptions">available textures will appear here</h5>
         <p class="banner" style="font-size: 15;">Need help implementing your packs? Click <a style="cursor: pointer; text-decoration: none; color: rgb(255, 94, 0);" href="Help.html">here</a> for support</p>
     <div id= "Options"><h1>Java Edition:</h1>
-
 <!-- Download buttons for Java go here -->
 <div style="margin-top: 100px;">
 <div class="gallery">
@@ -230,16 +251,22 @@
   <!-- Download buttons for Bedrock go here -->
   <div style="margin-top: 100px;">
     <div class="gallery">
-                <a onclick="openModal('huskModal')">
-                  <img src="Mummie.png" alt="Mummie Husk" width="600" height="400">
-                </a>
-                <div class="desc" onclick="openModal('seasonsModal')" >Haunting Husk</div>
-              </div>
+      <a onclick="openModal('huskModal')">
+        <img src="Mummie.png" alt="Mummie Husk" width="600" height="400">
+      </a>
+      <div class="desc" onclick="openModal('huskModal')" >Haunting Husk</div>
+    </div>
   <div class="gallery">
     <a onclick="openModal('chubbyGolemModel')">
       <img src="Fat Iron Golem.png" alt="Overweight Iron Golem" width="600" height="400">
     </a>
-    <div class="desc" onclick="openModal('seasonsModal')" >Fat Iron Golem</div>
+    <div class="desc" onclick="openModal('chubbyGolemModel')" >Fat Iron Golem</div>
+  </div>
+  <div class="gallery">
+    <a onclick="openModal('creeperModel')">
+      <img src="Bobblehead Creeper.png" alt="Overweight Iron Golem" width="33.3%" style="height: 400px; object-fit: contain;">
+    </a>
+    <div class="desc" onclick="openModal('creeperModel')" >Bobblehead Creeper</div>
   </div>
               </div>
             </div>
