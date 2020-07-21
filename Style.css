@@ -243,3 +243,6 @@ background-color: rgb(104, 55, 32);
     height: 30px;
     background-color: rgb(255, 136, 0);
   }
+  div{
+  user-select: none;
+  }
