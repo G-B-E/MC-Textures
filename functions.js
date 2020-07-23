@@ -58,3 +58,7 @@ function move() {
   }
 
 }
+//fake money alert box
+function moneyAlert() {
+  alert("Purchase will be fulfilled usind card stored in browser "+"\nYour credit card number is **** **** **** 8945");
+}
