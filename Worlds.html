@@ -42,24 +42,7 @@
         <p></p>
     </div>
     </div>
-     <script>
-        document.getElementById("Options").style.display = "none";
-        document.getElementById("2Options").style.display = "none";
-        
-        function buttonOptions() {
-        document.getElementById("Options").style.display = "inline";
-        document.getElementsByClassName("buttonOptions")[0].style.display = "none";
-        document.getElementsByClassName("buttonOptions")[1].style.display = "none";
-        document.getElementsByClassName("buttonOptions")[2].style.display = "none";
-        document.getElementsByClassName("platformText")[0].style.display = "none";
-        }
-        function buttonOptions2() {
-        document.getElementById("2Options").style.display = "inline";
-        document.getElementsByClassName("buttonOptions")[0].style.display = "none";
-        document.getElementsByClassName("buttonOptions")[1].style.display = "none";
-        document.getElementsByClassName("buttonOptions")[2].style.display = "none";
-        document.getElementById("platformText")[0].style.display = "none";
-        }
+     <script src="functions.js">
         </script>
 <div id="updatesModal" class="modal" style="margin-top: -44px;border: none;">
   <div class="modal-content">
@@ -89,13 +72,5 @@
         </div>
         </div>
         </div>
-        <script>
-        function openModal(id) {
-            document.getElementById(id).style.display = "block";
-          }
-          function closeModal(id) {
-            document.getElementById(id).style.display = "none";
-          }
-          </script>
 </body>
 </html>
