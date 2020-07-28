@@ -26,8 +26,41 @@
       </ul>
       </div>
   </div>
-    
-
+    <!-- Updates Tab Modal -->
+  <div id="updatesModal" class="modal" style="margin-top: -44px; border: rgba(211, 211, 211, 0); border-radius: 5px;">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: rgba(8, 95, 0, 0.829);">
+        <span class="close"  onclick="closeModal('updatesModal')">&times;</span>
+        <h2>Updates</h2>
+      </div>
+      <div class="modal-body">
+        <div style="width:100%; text-align: center;">
+        <div style="width:100%; text-align: center;">
+          <p></p>
+          <img src="Lily Pad.png" style="height:50px; width: 50px; object-fit:cover;">
+          <img src="Lily Pad.png" style="height:50px; width: 50px; object-fit:cover;">
+          <img src="Lily Pad.png" style="height:50px; width: 50px; object-fit:cover;">
+        </div>
+        <p style="margin-left: 10px; font-family: Quicksand; font-size: 19px;">Updated MC Textures: Skins are now available with downloads! Download a pack to see if a free skin is included!<br><br>
+        Updated Packs include:<br><br>
+        Weapons and Combat may be updated to contain a golden Glaive! (Java)<br><br>
+        Haunting Husk: Modal Images Updated and included before download (Bedrock)<br><br>
+        Detailed lily pad is coming to java soon!
+        </p>
+      <div style="width:100%; text-align: center;">
+        <img src="Lily Pad.png" style="height:50px; width: 50px; object-fit:cover;">
+        <img src="Lily Pad.png" style="height:50px; width: 50px; object-fit:cover;">
+        <img src="Lily Pad.png" style="height:50px; width: 50px; object-fit:cover;">
+      </div></div>
+        <p style="margin-left: 10px; font-family: Quicksand;"></p>
+      </div>
+        <div onclick="closeModal('updatesModal')">
+       <button class="downloadButton" onclick="this.getElementsByTagName('a')[0].click('click')"><a href="" download ></a> DOWNLOAD SKIN</button></div>
+      <div class="modal-footer" style="background-color: rgba(8, 95, 0, 0.829);">
+        <h3>Download the free MC Textures skin!</h3>
+    </div>
+    </div>
+    </div>
     <div class= "floatingCard">
         <h5 class="buttonOptions">available worlds will appear here</h5>
     <div id= "Options"><h1 >Java Edition:</h1>
@@ -42,35 +75,6 @@
         <p></p>
     </div>
     </div>
-     <script src="functions.js">
-        </script>
-<div id="updatesModal" class="modal" style="margin-top: -44px;border: none;">
-  <div class="modal-content">
-    <div class="modal-header" style="background-color: rgba(112, 112, 112, 0.829);">
-      <span class="close"  onclick="closeModal('updatesModal')">&times;</span>
-      <h2>Updates</h2>
-    </div>
-    <div class="modal-body">
-      <p style="margin-left: 10px; font-family: Quicksand; font-size: 19px;">Updated MC Textures: Skins are now available with downloads! Download a pack to see if a free skin is included!<br>
-      Updated Packs include:<br><br>
-      Rainbows and coolness: Download cleaned of excess texures (Java)<br><br>
-      Village visual: Free skin updated (Java)<br><br>
-      Haunting Husk: Modal Images Updated and included before download (Bedrock)
-
-      </p>
-      <img src="Mummie 2.png" style="height:306px; width: 780px; object-fit:cover;">
-      
-      <p style="margin-left: 10px; font-family: Quicksand;"></p>
-    </div>
-      <div onclick="closeModal('updatesModal')">
-     <button class="downloadButton"> DOWNLOAD SKIN</button></div>
-    <div class="modal-footer" style="background-color: rgba(112, 112, 112, 0.829);">
-      <h3>Download the free MC Textures skin!</h3>
-  </div>
-  </div>
-  </div>
-        </div>
-        </div>
-        </div>
+     <script src="functions.js"></script>
 </body>
 </html>

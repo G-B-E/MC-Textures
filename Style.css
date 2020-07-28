@@ -127,19 +127,41 @@ background-color: rgb(104, 55, 32);
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
   
-  /* Modal Content */
   .modal-content {
     position: relative;
     background-color: #fefefe;
     margin: auto;
     padding: 0;
     border: 1px solid #888;
+    border-radius: 10px;
     width: 80%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
     animation-duration: 0.4s
+  }
+    .modal-header {
+    font-family: Quicksand;
+    padding: 2px 16px;
+    background-color: #ff7b00;
+    color: white;
+    border-top: 1px solid rgba(136, 136, 136, 0);
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+  }
+  
+  .modal-body {padding: 2px 16px;}
+  
+  .modal-footer {
+    font-family: Quicksand;
+    padding: 2px 16px;
+    background-color: #ff7b00;
+    color: white;
+    margin-top: -1px;
+    border-bottom: 1px solid rgba(136, 136, 136, 0);
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
   }
   
   @-webkit-keyframes animatetop {
@@ -166,21 +188,7 @@ background-color: rgb(104, 55, 32);
     cursor: pointer;
   }
   
-  .modal-header {
-    font-family: Quicksand;
-    padding: 2px 16px;
-    background-color: #ff7b00;
-    color: white;
-  }
-  
-  .modal-body {padding: 2px 16px;}
-  
-  .modal-footer {
-    font-family: Quicksand;
-    padding: 2px 16px;
-    background-color: #ff7b00;
-    color: white;
-  }
+
   div.gallery {
     margin: 0.5%;
     border: 1px solid #ccc;
